@@ -5,8 +5,8 @@ const router = require('express').Router();
 
 
 //DEFINE OUR ROUTES (AKA - MODULES)
-const userRoutes = require('.modules/user/user.routes');
-const authRoutes = require('.modules/auth/auth.routes');
+const userRoutes = require('./modules/user/user.routes');
+const authRoutes = require('./modules/auth/auth.routes');
 
 
 

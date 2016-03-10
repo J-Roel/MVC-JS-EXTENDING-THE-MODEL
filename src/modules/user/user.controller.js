@@ -73,9 +73,9 @@ function create(req,res,next){
 
 	//Assign information from form to an object
 	let user = {
-		username = req.body.username,
-		password = req.body.password,
-		email = req.body.email
+		// username = req.body.username,
+		// password = req.body.password,
+		// email = req.body.email
 	}
 
 	//Send our user object for validation

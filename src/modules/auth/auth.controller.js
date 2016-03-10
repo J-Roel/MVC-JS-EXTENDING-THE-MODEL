@@ -2,7 +2,7 @@
 
 
 //REQUIRE OUR USER.MODEL SO WE HAVE FUNCTIONS AVAILABLE IN OUR FUNCTIONS BELOW
-const userModel = require('../module/user/user.model');
+const userModel = require('../user/user.model');
 
 
 
@@ -48,7 +48,7 @@ function isAuthenticated(req,res,next){
 // -	This checks for roles and such
 //----------------------------------
 function isAuthorized(req,res,next){
-	let userId = req.session.jwtStuff.id;
+	//let userId = req.session.jwtStuff.id;
 
 	userModel.getById(userId)
 	.then( (result) => { 
@@ -57,12 +57,11 @@ function isAuthorized(req,res,next){
 		}else if(resutl.role === author){
 			//do something else
 			//next();
-		}
 		} else {
 			unauthorizedRequest(req,res,next);
 		}
 	})
-	.catch( (err) {
+	.catch( (err) => {
 		next(err);
 	})
 }

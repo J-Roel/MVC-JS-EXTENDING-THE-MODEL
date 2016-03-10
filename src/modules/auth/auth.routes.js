@@ -3,7 +3,7 @@
 const router = require('express').Router();
 
 
-const authController = require('.modules/auth/auth.controller');
+const authController = require('./auth.controller');
 
 
 
